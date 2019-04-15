@@ -7,7 +7,7 @@
 <script>
 
 
-import lmain from './lei/Lmain.vue'
+import lmain from './components/lei/Lmain.vue'
 
 export default {
   components: {

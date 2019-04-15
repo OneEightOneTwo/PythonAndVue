@@ -2,7 +2,7 @@
   <div>
     <xheader></xheader>
     <div class="img">
-      <img src="../assets/nav.png" alt>
+      <img src="../../assets/nav.png" alt>
     </div>
     <div>
       <ul class="mail">
@@ -39,7 +39,7 @@
   </div>
 </template>
 <script>
-import xheader from "../components/Xheader.vue";
+import xheader from "../Xheader.vue";
 export default {
   components: {
     xheader
@@ -62,7 +62,7 @@ export default {
   left: 20px;
 }
 .right {
-  background: url(../assets/arrow-right.png) no-repeat center;
+  background: url(../../assets/arrow-right.png) no-repeat center;
   background-size: 20px;
   display: inline-block;
   width: 20px;
