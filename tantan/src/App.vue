@@ -1,21 +1,19 @@
+ 
+
+
+
+
+
 <template>
-    <lmain>
-      
-    </lmain>
+  <div id="app">
+    <router-view></router-view>
+  </div>
 </template>
 
 <script>
 
-
-import lmain from './components/lei/Lmain.vue'
-
-export default {
-  components: {
-    lmain
-  }
-}
 </script>
 
 <style>
-
 </style>
+
