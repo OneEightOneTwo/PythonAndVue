@@ -9,6 +9,9 @@
         <div class="main">
           <div class="address">
             <div class="main_title">位置</div>
+            <div class="now_address">
+              <b>我的当前定位</b>
+            </div>
           </div>
         </div>
       </div>
@@ -41,12 +44,19 @@ export default {
 }
 .main {
   margin-left: 22px;
+  overflow: hidden;
 }
 .SFM_content {
   background-color: #fff;
+  overflow: hidden;
+}
+.address {
+  line-height: 76px;
+  border-bottom: 1px solid #e9e9e9;
+  overflow: hidden;
 }
 .main_title {
   color: #494949;
-  border-bottom: 1px solid #e9e9e9;
+  float: left;
 }
 </style>
