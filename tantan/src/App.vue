@@ -1,21 +1,19 @@
 <template>
-    <lmain>
-      
-    </lmain>
+  <!-- <lmain> </lmain> -->
+  <SheZhi></SheZhi>
 </template>
 
 <script>
-
-
-import lmain from './components/lei/Lmain.vue'
+// import lmain from './components/lei/Lmain.vue'
+import SheZhi from "./components/zwq/SheZhi.vue";
 
 export default {
   components: {
-    lmain
+    // lmain
+    SheZhi
   }
-}
+};
 </script>
 
 <style>
-
 </style>
