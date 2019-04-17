@@ -9,6 +9,33 @@
         <p>查看谁喜欢了我</p>
       </div>
     </a>
+     <a href="##" class="news">
+      <div class="portrait">
+        <img src="../../../assets/4.jpg">
+      </div>
+      <div class="port">
+        <h5>查看谁喜欢了我</h5>
+        <p>查看谁喜欢了我</p>
+      </div>
+    </a>
+     <a href="##" class="news">
+      <div class="portrait">
+        <img src="../../../assets/4.jpg">
+      </div>
+      <div class="port">
+        <h5>查看谁喜欢了我</h5>
+        <p>查看谁喜欢了我</p>
+      </div>
+    </a>
+     <a href="##" class="news">
+      <div class="portrait">
+        <img src="../../../assets/4.jpg">
+      </div>
+      <div class="port">
+        <h5>查看谁喜欢了我</h5>
+        <p>查看谁喜欢了我</p>
+      </div>
+    </a>
   </div>
 </template>
 <script>
@@ -44,12 +71,14 @@ export default {};
     left:30px;
 }
 .port h5{
+
     color:seashell;
-    font-weight:normal
+    font-weight:normal;
+    font-size: 12px;
 }
 .port p{
     color:rgb(159, 184, 181);
-    font-size: 12px;
+    font-size: 10px;
 }
 </style>
 

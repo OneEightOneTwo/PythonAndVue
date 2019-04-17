@@ -26,7 +26,7 @@ export default {
   }
 };
 </script>
-<style>
+<style scoped>
 .body {
   background-color: #f4f6f0;
   height: 1000px;

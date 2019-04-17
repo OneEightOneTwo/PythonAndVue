@@ -3,7 +3,15 @@ import App from './App.vue'
 // 引入路由对象
 import router from './router.js'
 
+
+import './js/vue-swiper'
+
 import 'weui'
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+
+Vue.use(ElementUI);
+
 Vue.config.productionTip = false
 
 new Vue({

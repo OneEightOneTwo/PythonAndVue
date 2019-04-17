@@ -10,6 +10,15 @@ import ident from './components/yanfeng/identification.vue'
 import lmain from './components/lei/page/Lmain.vue'
 //引入朋友圈模块
 import lsetup from './components/lei/page/Lsetup.vue'
+//引入个人资料模块
+import personaldata from './components/lei/page/personaldata.vue'
+//引入编辑个人资料模块
+import edit from './components/lei/page/edit.vue'
+//引入行业模块
+import industry from './components/lei/page/industry.vue'
+//引入微信模块
+import wei from './components/lei/page/wei.vue'
+
 // 定义路由
 const routes = [{
             path: '/active',
@@ -21,10 +30,6 @@ const routes = [{
             name: 'ident',
 
         }, {
-            path: '/ident',
-            component: ident,
-            name: 'ident',
-        }, {
             path: '/lmain',
             component: lmain,
             name: 'lmain',
@@ -32,7 +37,25 @@ const routes = [{
             path: '/lsetup',
             component: lsetup,
             name: 'lsetup',
+        }, {
+            path: '/personaldata',
+            component: personaldata,
+            name: 'personaldata',
+        }, {
+            path: '/edit',
+            component: edit,
+            name: 'edit',
+        }, {
+            path: '/industry',
+            component: industry,
+            name: 'industry',
+        }, {
+            path: '/wei',
+            component: wei,
+            name: 'wei',
         }
+        
+        
 
 
 
