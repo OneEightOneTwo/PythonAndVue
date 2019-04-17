@@ -29,41 +29,23 @@ const routes = [{
     path: '/ident',
     component: ident,
     name: 'ident',
-
-<<<<<<< HEAD
-        }, {
-            path: '/lmain',
-            component: lmain,
-            name: 'lmain',
-        }, {
-            path: '/lsetup',
-            component: lsetup,
-            name: 'lsetup',
-        }, {
-            path: '/personaldata',
-            component: personaldata,
-            name: 'personaldata',
-        }, {
-            path: '/edit',
-            component: edit,
-            name: 'edit',
-        }, {
-            path: '/industry',
-            component: industry,
-            name: 'industry',
-        }, {
-            path: '/wei',
-            component: wei,
-            name: 'wei',
-        }
-        
-        
-=======
+},{
+    path: '/personaldata',
+    component: personaldata,
+    name: 'personaldata',
 }, {
-    path: '/ident',
-    component: ident,
-    name: 'ident',
+    path: '/edit',
+    component: edit,
+    name: 'edit',
 }, {
+    path: '/industry',
+    component: industry,
+    name: 'industry',
+}, {
+    path: '/wei',
+    component: wei,
+    name: 'wei',
+} ,{
     path: '/lmain',
     component: lmain,
     name: 'lmain',
@@ -76,7 +58,6 @@ const routes = [{
     component: shezhi,
     name: 'shezhi',
 }
->>>>>>> 0efd64a8b22f8c7780f623055dd8f3588ebe7775
 
 
 
