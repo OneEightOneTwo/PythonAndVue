@@ -3,7 +3,10 @@ import App from './App.vue'
 // 引入路由对象
 import router from './router.js'
 
+import swip from 'vue-swiper'
+
 import 'weui'
+
 Vue.config.productionTip = false
 
 new Vue({
@@ -13,6 +16,7 @@ new Vue({
         // 配置状态管理
         // store,
         // 渲染App组件
+        swip,
         render: h => h(App),
     })
     // .$mount('#app')
