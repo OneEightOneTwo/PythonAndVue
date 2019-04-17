@@ -1,17 +1,17 @@
 <template>
-<div>
-     <header>
-    <!-- 左图标 -->
-    <div class="leftIcon"></div>
+  <div>
+    <header>
+      <!-- 左图标 -->
+      <div class="leftIcon"></div>
 
-    <!-- 标题 -->
-    <div class="title">新手指导</div>
-    <!-- 右图标 -->
-    <div class="rightIcon"></div>
-  </header>
- 
-</div>
- 
+      <!-- 标题 -->
+      <div class="title">
+          <slot></slot>
+      </div>
+      <!-- 右图标 -->
+      <div class="rightIcon"></div>
+    </header>
+  </div>
 </template>
 <script>
 export default {};
@@ -29,10 +29,10 @@ header {
   display: flex;
 }
 .leftIcon {
-  background:url(../assets/menu.png) no-repeat center ;
+  background: url(../assets/menu.png) no-repeat center;
   background-size: 24px;
 
-    flex: 1;
+  flex: 1;
 }
 
 .title {
@@ -42,11 +42,9 @@ header {
 .emptyIcon {
   flex: 1;
 }
- .rightIcon {
-      background:url(../assets/my.png) no-repeat center ;
-     background-size: 24px;
-    flex: 1;
-  }
- 
-
+.rightIcon {
+  background: url(../assets/my.png) no-repeat center;
+  background-size: 24px;
+  flex: 1;
+}
 </style>
