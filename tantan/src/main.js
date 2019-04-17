@@ -2,6 +2,10 @@ import Vue from 'vue'
 import App from './App.vue'
 // 引入路由对象
 import router from './router.js'
+
+import swip from 'vue-swiper'
+
+
 //引入element模块
 import 'weui'
 import ElementUI from 'element-ui';
@@ -18,9 +22,12 @@ new Vue({
     // 配置状态管理
     // store,
     // 渲染App组件
+    swip,
     render: h => h(App),
 })
-    // .$mount('#app')
+
+
+// .$mount('#app')
 
 
 
