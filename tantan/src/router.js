@@ -7,10 +7,11 @@ import active from './components/yanfeng/active.vue'
 //引入认证模块部分
 import ident from './components/yanfeng/identification.vue'
 //引入新手模块部分
-import lmain from './components/lei/Lmain.vue'
-
-import shezhi from './components/zwq/SheZhi.vue'
+import lmain from './components/lei/page/Lmain.vue'
+//引入朋友圈模块
+import lsetup from './components/lei/page/Lsetup.vue'
 // 定义路由
+import shezhi from './components/zwq/SheZhi.vue'
 const routes = [{
     path: '/active',
     component: active,
@@ -19,6 +20,7 @@ const routes = [{
     path: '/ident',
     component: ident,
     name: 'ident',
+
 }, {
     path: '/ident',
     component: ident,
@@ -28,10 +30,17 @@ const routes = [{
     component: lmain,
     name: 'lmain',
 }, {
+    path: '/lsetup',
+    component: lsetup,
+    name: 'lsetup',
+}, {
     path: '/shezhi',
     component: shezhi,
     name: 'shezhi',
 }
+
+
+
 ]
 // 实例化路由
 const router = new VueRouter({
