@@ -20,15 +20,17 @@ import industry from './components/lei/page/industry.vue'
 import wei from './components/lei/page/wei.vue'
 
 // 定义路由
+import shezhi from './components/zwq/SheZhi.vue'
 const routes = [{
-            path: '/active',
-            component: active,
-            name: 'active',
-        }, {
-            path: '/ident',
-            component: ident,
-            name: 'ident',
+    path: '/active',
+    component: active,
+    name: 'active',
+}, {
+    path: '/ident',
+    component: ident,
+    name: 'ident',
 
+<<<<<<< HEAD
         }, {
             path: '/lmain',
             component: lmain,
@@ -56,11 +58,30 @@ const routes = [{
         }
         
         
+=======
+}, {
+    path: '/ident',
+    component: ident,
+    name: 'ident',
+}, {
+    path: '/lmain',
+    component: lmain,
+    name: 'lmain',
+}, {
+    path: '/lsetup',
+    component: lsetup,
+    name: 'lsetup',
+}, {
+    path: '/shezhi',
+    component: shezhi,
+    name: 'shezhi',
+}
+>>>>>>> 0efd64a8b22f8c7780f623055dd8f3588ebe7775
 
 
 
-    ]
-    // 实例化路由
+]
+// 实例化路由
 const router = new VueRouter({
     routes
 })
