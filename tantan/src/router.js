@@ -4,18 +4,14 @@ import Vant from 'vant';
 import 'vant/lib/index.css';
 
 import VueRouter from 'vue-router'
-<<<<<<< HEAD
 
 // 模块化必须显式使用Vue.use来加载路由功能
-Vue.use(VueRouter)
 Vue.use(Vant)
-=======
 // import VueSwiper from 'vue-swiper'
 // 模块化必须显式使用Vue.use来加载路由功能
 Vue.use(VueRouter)
 // Vue.use(vueSwiper)
 //引入激活会员模块
->>>>>>> 1f8776f6478da12529aaaa62a32b114839d832d1
 //引入激活会员模块
 import active from './components/yanfeng/active.vue'
 //引入认证模块部分
