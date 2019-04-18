@@ -1,5 +1,12 @@
 import Vue from 'vue'
+//引入vant ui
+import Vant from 'vant';
+import 'vant/lib/index.css';
+
 import VueRouter from 'vue-router'
+
+// 模块化必须显式使用Vue.use来加载路由功能
+Vue.use(Vant)
 // import VueSwiper from 'vue-swiper'
 // import VueAwesomeSwiper from 'vue-awesome-swiper'
 
