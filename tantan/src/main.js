@@ -3,8 +3,8 @@ import App from './App.vue'
 // 引入路由对象
 import router from './router.js'
 
-import swip from 'vue-swiper'
-
+// import swip from 'vue-swiper'
+import 'vue-swiper'
 
 //引入element模块
 import 'weui'
@@ -22,7 +22,7 @@ new Vue({
     // 配置状态管理
     // store,
     // 渲染App组件
-    swip,
+
     render: h => h(App),
 })
 

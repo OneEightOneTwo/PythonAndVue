@@ -1,5 +1,8 @@
 <template>
-    <div class="side">
+    <div id="side" :class="{
+    side1:state.isAside,
+    side2:!state.isAside
+  }">
         <dl>
             <dt><img class="im1" src="../../assets/yu1.jpg" alt="">
                 <span><img src="../../assets/tou_v.jpg"></span>
@@ -25,8 +28,15 @@
     </div>
 </template>
 <script>
+import state from '../../observable.js'
 export default {
-  components: {}
+  components: {},
+   //从observel里获取值
+   computed:{
+   state(){
+     return state
+   }
+  }
 };
 </script>
 <style scoped>
@@ -34,14 +44,32 @@ ul,
 li {
   list-style: none;
 }
-.side dl {
+.side1{
+  position:absolute;
+  width:85%;
+  height:2289px;
+  margin-left:0;
+  transition:all 2s;
+  z-index:3;
+  margin-top:-50px;
+}
+.side2{
+  position:absolute;
+  width:85%;
+   height:2289px;
+  margin-left:-85%;
+  transition:all 2s;
+  z-index:3;
+   margin-top:-50px;
+}
+#side dl {
   width: 85%;
   height: 220px;
   background:#2c3033;
   position: relative;
   /* z-index:2; */
 }
-.side dl dt {
+#side dl dt {
   width: 87px;
   height: 87px;
   border-radius: 50%;
@@ -50,12 +78,12 @@ li {
   top: 79px;
   left: 113px;
 }
-.side dl dt .im1{
+#side dl dt .im1{
     width:100%;
     height:100%;
     border-radius: 50%;
 }
-.side dl dt span{
+#side dl dt span{
     width:27px;
     height:27px;
     border-radius:50%;
@@ -64,43 +92,43 @@ li {
     left:55px;
     top:65px;
 }
-.side dl dt span img{
+#side dl dt span img{
     width:100%;
     height:100%;
 }
-.side dl dt img {
+#side dl dt img {
   width: 100%;
   height: 100%;
 }
-.side dl dd {
+#side dl dd {
   width: 100%;
   text-align: center;
   position: absolute;
   top: 176px;
   left: 0px;
 }
-.side dl dd h2 {
+#side dl dd h2 {
   font-size: 17px;
   color: #f6f2ef;
 }
-.side dl dd p {
+#side dl dd p {
   color: #cecdcb;
   font-size: 12px;
 }
-.side .bottom {
+#side .bottom {
   height: 552px;
   background:#2c3033;
   width: 85%;
   padding-top: 35px;
   z-index: 2;
 }
-.side .bottom ul li {
+#side .bottom ul li {
   height: 22px;
   width: 200px;
   position: relative;
   margin-bottom: 45px;
 }
-.side .bottom ul li i {
+#side .bottom ul li i {
   display: inline-block;
   width: 21px;
   height: 21px;
@@ -108,11 +136,11 @@ li {
   left: 35px;
   top: 0px;
 }
-.side .bottom ul li i img {
+#side .bottom ul li i img {
   width: 100%;
   height: 100%;
 }
-.side .bottom ul li span {
+#side .bottom ul li span {
   font-size: 12px;
   color: #fffeff;
   font-weight: normal;
