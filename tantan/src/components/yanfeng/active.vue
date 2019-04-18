@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="active">
         <xheader></xheader>
         <div class="banner">
             <img class="ig1" src="../../assets/yu1.jpg" alt="">
@@ -63,7 +63,10 @@ export default {
   }
 };
 </script>
-<style >
+<style scoped>
+.active{
+  width: 100%;
+}
 ul,
 li {
   list-style: none;
