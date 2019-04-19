@@ -7,8 +7,8 @@ import VueRouter from 'vue-router'
 
 // 模块化必须显式使用Vue.use来加载路由功能
 Vue.use(Vant)
-// import VueSwiper from 'vue-swiper'
-// import VueAwesomeSwiper from 'vue-awesome-swiper'
+    // import VueSwiper from 'vue-swiper'
+    // import VueAwesomeSwiper from 'vue-awesome-swiper'
 
 // require styles
 // import 'swiper/dist/css/swiper.css'
@@ -21,7 +21,7 @@ import active from './components/yanfeng/active.vue'
 //引入认证模块部分
 import ident from './components/yanfeng/identification.vue'
 //引入左侧边栏模块
-import asid from './components/yanfeng/asid.vue'
+// import asid from './components/yanfeng/asid.vue'
 //引入home模板部分
 import home from './components/yanfeng/home.vue'
 import lmain from './components/lei/page/Lmain.vue'
@@ -38,57 +38,20 @@ import wei from './components/lei/page/wei.vue'
 
 // 定义路由
 import shezhi from './components/zwq/SheZhi.vue'
-const routes = [{
-            path: '/active',
-            component: active,
-            name: 'active',
-        }, {
-            path: '/asid',
-            component: asid,
-            name: 'asid',
-
-        }, {
-            path: '/home',
-            component: home,
-            name: 'home',
-        },
-        {
-            path: '/lmain',
-            component: lmain,
-            name: 'lmain',
-        }, {
-            path: '/personaldata',
-            component: personaldata,
-            name: 'personaldata',
-        }, {
-            path: '/edit',
-            component: edit,
-            name: 'edit',
-        }, {
-            path: '/industry',
-            component: industry,
-            name: 'industry',
-        }, {
-            path: '/wei',
-            component: wei,
-            name: 'wei',
-        }, {
-            path: '/ident',
-            component: ident,
-            name: 'ident',
-        }, {
-            path: '/lsetup',
-            component: lsetup,
-            name: 'lsetup',
-        }, {
-            path: '/shezhi',
-            component: shezhi,
-            name: 'shezhi',
-        }
-
-
-
-
+const routes = [
+        { path: '/home', component: home, name: 'home', },
+        { path: 'shezhi', component: shezhi, name: 'shezhi', },
+        { path: '/personaldata', component: personaldata, name: 'personaldata', },
+        { path: '/edit', component: edit, name: 'edit', },
+        { path: '/industry', component: industry, name: 'industry', },
+        { path: '/wei', component: wei, name: 'wei', },
+        { path: '/lsetup', component: lsetup, name: 'lsetup', },
+        { path: 'tantan', component: home, name: 'tantan', },
+        { path: 'ident', component: ident, name: 'ident', },
+        { path: 'active', component: active, name: 'active', },
+        //     { path: 'shezhi', component: shezhi, name: 'shezhi', }
+        { path: '/lmain', component: lmain, name: 'lmain', },
+        { path: '/', redirect: '/home' }
     ]
     // 实例化路由
 const router = new VueRouter({

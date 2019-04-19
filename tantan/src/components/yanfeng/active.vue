@@ -1,6 +1,43 @@
 <template>
-    <div class="active">
-        <xheader>认证中心</xheader>
+    <div id="active" 
+    :class="{
+    active1:state.isAside,
+    active2:!state.isAside
+  }"
+  >
+        <!-- <xheader>认证中心</xheader> -->
+        <div>
+    <header>
+      <!-- 左图标 -->
+      <div class="leftIcon" 
+      @click="clickLeft"
+      ></div>
+
+      <!-- 标题 -->
+      <div class="title">
+          认证中心
+      </div>
+      <!-- 右图标 -->
+      <div class="rightIcon"
+      @click="clickRight"></div>
+    </header>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         <div class="banner">
             <img class="ig1" src="../../assets/yu1.jpg" alt="">
             <div class="banner_c">
@@ -53,13 +90,33 @@
             </dl>
         </div>
         <div class="getMember" style="background:#ea6151;color:#fff1ee;">认证成功</div>
+        <asid ></asid>
     </div>
+    
 </template>
 <script>
-import xheader from "../Xheader.vue";
+// import xheader from "../Xheader.vue";
+import state from '../../observable.js'
+import asid from './asid.vue'
 export default {
   components: {
-    xheader
+    // xheader
+    asid
+  },
+  methods:{
+    clickLeft(){
+      this.state.isAside=!this.state.isAside
+      // this.state.ischangeStyle=!this.state.ischangeStyle
+    },
+   clickRight(){
+      this.state.ischangeStyle=!this.state.ischangeStyle
+      // this.state.isAside=!this.state.isAside
+    },
+  },
+  computed:{
+   state(){
+     return state
+   }
   }
 };
 </script>
@@ -71,6 +128,52 @@ ul,
 li {
   list-style: none;
 }
+/* .active1{
+  margin-left:0px;
+}
+.active2{
+  margin-left:300px;
+} */
+
+/* 头部 */
+header {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  color: white;
+  background-color: red;
+  /* 弹性盒布局 */
+  display: flex;
+}
+.leftIcon {
+  background: url(../../assets/menu.png) no-repeat center;
+  background-size: 24px;
+
+  flex: 1;
+}
+
+.title {
+  flex: 3;
+}
+
+.emptyIcon {
+  flex: 1;
+}
+.rightIcon {
+  background: url(../../assets/my.png) no-repeat center;
+  background-size: 24px;
+  flex: 1;
+}
+
+
+
+
+
+
+
+
+
 .banner {
   width: 100%;
   height: 124px;

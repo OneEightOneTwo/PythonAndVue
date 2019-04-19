@@ -158,6 +158,7 @@ template {
   position:absolute;
   top:0px;
   right:-410px;
+  /* right:273px; */
   width: 85%;
   height: 100%;
   z-index:2;
