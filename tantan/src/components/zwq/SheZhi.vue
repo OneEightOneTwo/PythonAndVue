@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Xheader></Xheader>
+    <xheader></xheader>
     <div class="body">
       <div class="ShowFoMe">
         <span>向我显示</span>
@@ -57,10 +57,10 @@
   </div>
 </template>
 <script>
-import Xheader from "../Xheader.vue";
+import xheader from "../Xheader.vue";
 export default {
   components: {
-    Xheader
+    xheader
   }
 };
 </script>

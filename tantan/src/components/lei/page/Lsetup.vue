@@ -69,7 +69,7 @@ template {
   position: absolute;
   background: #2e2721;
   top: 0px;
-  right: 0px;
+  right: -320px;
 }
 #box li {
   list-style: none;

@@ -2,19 +2,39 @@
   <div>
     <header>
       <!-- 左图标 -->
-      <div class="leftIcon"></div>
+      <div class="leftIcon" 
+      @click="clickLeft"
+      ></div>
 
       <!-- 标题 -->
       <div class="title">
           <slot></slot>
       </div>
       <!-- 右图标 -->
-      <div class="rightIcon"></div>
+      <div class="rightIcon"
+      @click="clickRight"></div>
     </header>
   </div>
 </template>
 <script>
-export default {};
+import state from '../observable.js'
+export default {
+  methods:{
+    clickLeft(){
+      
+      this.state.ischangeStyle=!this.state.ischangeStyle
+    },
+   clickRight(){
+      
+      this.state.isAside=!this.state.isAside
+    },
+  },
+  computed:{
+   state(){
+     return state
+   }
+  }
+};
 </script>
 <style scoped >
 /* css是局部样式 */
