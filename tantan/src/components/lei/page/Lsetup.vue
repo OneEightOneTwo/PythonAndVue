@@ -1,5 +1,5 @@
 <template>
-  <div id="box" :style="!state.isActionsheet ? state.falseright :state.trueright">
+  <div id="box" :style="!state.isleft ? state.falseright :state.trueright">
     <div class="headers">
       <div class="heade">
         <span>2</span>个配对
