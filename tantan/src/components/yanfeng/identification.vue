@@ -49,7 +49,7 @@
 </template>
 <script>
 import xheader from "../Xheader.vue";
-// import "../../rem.js";
+
 export default {
     components:{
         xheader

@@ -1,29 +1,40 @@
 <template>
-  <div>
-    <router-view></router-view>
-    <xheader></xheader>
-   <lsetup></lsetup>
-   <asid></asid>
+  <div style="overflow:hidden;position:relative;height:568px">
+
+    <xhome ></xhome>
+    <lsetup ></lsetup>
+    <asid></asid>
   </div>
 </template>
 <script>
-// import "../../js/vue-swiper.js";
-import "../../main.js";
+// import lsetup from "../lei/page/Lsetup.vue";
 
-import lsetup from "../lei/page/Lsetup.vue";
+import xhome from "./xhome.vue";
 import asid from "./asid.vue";
-import xheader from "../Xheader.vue";
+import lsetup from "../lei/page/Lsetup.vue";
 export default {
-  components: {
-   xheader,
-    lsetup,
-    asid
-    // swiper
+   name: "app",
+    components: {
+     lsetup,
+     xhome,
+     asid
+    },
+  
+  data() {
+    return {
+      
+     
+      
+    };
   },
+  
 
+  
 };
 </script>
 <style scoped>
+
+
 
 </style>
 

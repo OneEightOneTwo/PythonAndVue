@@ -1,6 +1,6 @@
 <template>
     <div class="active">
-        <xheader></xheader>
+        <xheader>认证中心</xheader>
         <div class="banner">
             <img class="ig1" src="../../assets/yu1.jpg" alt="">
             <div class="banner_c">

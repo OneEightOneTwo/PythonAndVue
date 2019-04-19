@@ -1,5 +1,12 @@
 <template>
-  <div id="box">
+  <div
+    id="box"
+    :class="{
+    changeStyle:state.ischangeStyle,
+    changeStyle1:!state.ischangeStyle
+  }"
+    class="changeStyle"
+  >
     <div class="headers">
       <div>
         <span>2</span>个配对
@@ -32,6 +39,7 @@
 </template>
 
 <script>
+import state from "../../../observable.js";
 import pair from "../components/pair.vue";
 import chat from "../components/chat.vue";
 export default {
@@ -46,6 +54,7 @@ export default {
         }
       ],
       active: 0
+      // bool:false
     };
   },
   components: {
@@ -55,6 +64,12 @@ export default {
   methods: {
     change(idx) {
       this.active = idx;
+    }
+  },
+  //从observel里获取值
+  computed: {
+    state() {
+      return state;
     }
   }
 };
@@ -72,10 +87,13 @@ template {
   right: -320px;
 }
 #box li {
+  right: 0px;
+}
+li {
   list-style: none;
 }
-.main{
-  background: #2d2824
+.main {
+  background: #2d2824;
 }
 .headers {
   width: 100%;
@@ -140,6 +158,26 @@ template {
 .navs .link {
   background: #736b68;
   color: aliceblue;
+}
+.changeStyle {
+  background: #2e2721;
+  position: absolute;
+  top: 0px;
+  right: -410px;
+  width: 85%;
+  height: 100%;
+  z-index: 2;
+  transition: all 3s;
+}
+.changeStyle1 {
+  background: #2e2721;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 85%;
+  height: 100%;
+  z-index: 2;
+  transition: all 3s;
 }
 </style>
 

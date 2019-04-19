@@ -1,16 +1,22 @@
 import Vue from 'vue'
+//引入vant ui
+import Vant from 'vant';
+import 'vant/lib/index.css';
+
 import VueRouter from 'vue-router'
-// import VueSwiper from 'vue-swiper'
+
 // 模块化必须显式使用Vue.use来加载路由功能
+Vue.use(Vant)
+
 Vue.use(VueRouter)
-// Vue.use(vueSwiper)
+// Vue.use(VueAwesomeSwiper)
+
 //引入激活会员模块
-//引入激活会员模块
-// import Active from './components/yanfeng/active.vue'
+import active from './components/yanfeng/active.vue'
 //引入认证模块部分
-// import Ident from './components/yanfeng/identification.vue'
+import Ident from './components/yanfeng/identification.vue'
 //引入左侧边栏模块
-import aside from './components/yanfeng/asid.vue'
+import asid from './components/yanfeng/asid.vue'
 //引入home模板部分
 import Home from './components/yanfeng/home.vue'
 
@@ -27,13 +33,21 @@ import industry from './components/lei/page/industry.vue'
 import wei from './components/lei/page/wei.vue'
 
 // 定义路由
-import Shezhi from './components/zwq/SheZhi.vue'
+import shezhi from './components/zwq/SheZhi.vue'
 const routes = [{ path: '/', redirect: '/home' },{
-    path: '/aside',
-    component: aside,
-    name: 'aside',
+    path: '/active',
+    component: active,
+    name: 'active',
+}, {
+    path: '/asid',
+    component: asid,
+    name: 'asid',
 
-}, 
+}, {
+    path: '/home',
+    component: Home,
+    name: 'home',
+},
 {
     path: '/lmain',
     component: lmain,
@@ -42,13 +56,11 @@ const routes = [{ path: '/', redirect: '/home' },{
     path: '/personaldata',
     component: personaldata,
     name: 'personaldata',
-    },
-    {
+}, {
     path: '/edit',
     component: edit,
     name: 'edit',
-    },
-    {
+}, {
     path: '/industry',
     component: industry,
     name: 'industry',
@@ -56,21 +68,19 @@ const routes = [{ path: '/', redirect: '/home' },{
     path: '/wei',
     component: wei,
     name: 'wei',
-    },
-    {
+}, {
+    path: '/ident',
+    component: Ident,
+    name: 'ident',
+}, {
     path: '/lsetup',
     component: Lsetup,
     name: 'lsetup',
-},  {
-    path: '/home',
-    component: Home,
-    name: 'home',
-    }, 
-     {
+}, {
     path: '/shezhi',
-    component: Shezhi,
+    component: shezhi,
     name: 'shezhi',
-}, 
+}
 
 
 
@@ -80,9 +90,6 @@ const routes = [{ path: '/', redirect: '/home' },{
 const router = new VueRouter({
     routes
 })
-// const vueSwiper = new VueSwiper({
-//     vueSwiper
-// })
 
 // 暴露路由对象，为后续挂载容器做准备
 export default router
