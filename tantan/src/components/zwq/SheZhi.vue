@@ -212,8 +212,6 @@ export default {
 html {
   background-color: #f4f6f0;
 }
-.body {
-}
 .ShowFoMe,
 .AppSet {
   height: 50px;
