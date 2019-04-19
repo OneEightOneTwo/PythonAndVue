@@ -1,7 +1,8 @@
 <template>
-<div >
-  <xheader></xheader>
+<div>
+  <xheader >探探</xheader>
 <swiper
+      class="vue-swiper"
       v-cloak
       ref="swiper"
       :allow-super="true"
@@ -27,17 +28,21 @@
       <img style="width:80px;" src="../../assets/like.png" @click="decide('like')">
       <img style="width:70px;" src="../../assets/help.png" @click="decide('show')">
     </div>
+    <asid ref="asid"></asid>
+    <lsetup ref="lsetup"></lsetup>  
 </div>
 </template>
 <script>
-import "../../js/vue-swiper.js";
-import 'vue-swiper'
-// import swiper from 'swiper'
+// import "../../js/vue-swiper.js";
 import "../../main.js";
 import xheader from "../Xheader.vue";
+import lsetup from "../lei/page/Lsetup.vue";
+import asid from "./asid.vue";
 export default {
   components: {
     xheader,
+    lsetup,
+    asid
     // swiper
   },
   
@@ -45,9 +50,6 @@ export default {
     return {
       queue: []
     };
-    // data: {
-    //           queue: []
-    //       }
   },
 
   updated: function() {
@@ -63,16 +65,6 @@ export default {
       }
       this.queue = this.queue.concat(list);
     },
-    // submit: function(info) {
-    //   if (this.queue.length < 2) {
-    //     this.getData();
-    //   }
-    // },
-    // submit(info){
-    //   if (this.queue.length < 2) {
-    //     this.getData();
-    //   }
-    // },
     decide: function(choice) {
       if (choice === "show") {
         window.location.href = "#";
@@ -80,7 +72,11 @@ export default {
       // console.log(this);
       this.$refs.swiper.decide(choice);
       // this.decide(choice)
-    }
+    },
+    //点击左侧出现侧栏
+    // clickLeft:function(){
+    //   console.log(this)
+    // }
   }
 };
 </script>
@@ -101,14 +97,17 @@ body {
 }
 
 #app .vue-swiper {
+  /* background:yellow; */
   position: absolute;
   z-index: 1;
   left: 0;
   right: 0;
-  top: 23px;
+  /* top: 23px; */
+  top:50px;
   margin: auto;
   width: calc(100% - 20px);
-  height: calc(100% - 23px - 18%);
+  /* height: calc(100% - 23px - 18%); */
+  height: calc(100% - 45px - 18%);
   min-width: 300px;
   max-width: 355px;
 }
@@ -141,8 +140,11 @@ body {
 }
 
 .pic {
-  width: 100%;
-  height: 100%;
+  background:skyblue;
+  /* width: 100%; */
+  width:100px;
+  /* height: 100%; */
+  height:100px;
   background-size: cover;
 }
 
