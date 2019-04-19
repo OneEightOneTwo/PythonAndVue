@@ -1,6 +1,18 @@
 <template>
     <div class="active">
-        <xheader>认证中心</xheader>
+        <div>
+    <header>
+      <!-- 左图标 -->
+      <div class="leftIcon"></div>
+
+      <!-- 标题 -->
+      <div class="title">
+        <slot></slot>
+      </div>
+      <!-- 右图标 -->
+      <div class="rightIcon"></div>
+    </header>
+  </div>
         <div class="banner">
             <img class="ig1" src="../../assets/yu1.jpg" alt="">
             <div class="banner_c">
@@ -56,14 +68,40 @@
     </div>
 </template>
 <script>
-import xheader from "../Xheader.vue";
+
 export default {
-  components: {
-    xheader
-  }
+ 
 };
 </script>
 <style scoped>
+header {
+  width: 10rem;
+  height: 1.333333rem;
+  line-height: 1.333333rem;
+  text-align: center;
+  color: white;
+  background-color: red;
+  /* 弹性盒布局 */
+  display: flex;
+}
+.leftIcon {
+  background: url(../../assets/menu.png) no-repeat center;
+  background-size: 0.64rem;
+  flex: 1;
+}
+
+.title {
+  flex: 3;
+}
+
+.emptyIcon {
+  flex: 1;
+}
+.rightIcon {
+  background: url(../../assets/my.png) no-repeat center;
+  background-size: 0.64rem;
+  flex: 1;
+}
 .active{
   width: 100%;
 }

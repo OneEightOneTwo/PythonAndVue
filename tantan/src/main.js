@@ -5,7 +5,7 @@ import router from './router.js'
 
 // import swip from 'vue-swiper'
 import 'vue-swiper'
-
+import './rem.js'
 //引入element模块
 import 'weui'
 import ElementUI from 'element-ui';

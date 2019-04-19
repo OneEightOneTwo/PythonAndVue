@@ -1,6 +1,19 @@
 <template>
     <div>
-        <xheader>个人资料</xheader>
+        <div :style="state.isActionsheet ? state.aright: state.bright">
+    <header>
+      <!-- 左图标 -->
+      <div class="leftIcon" ></div>
+
+      <!-- 标题 -->
+      <div class="title">
+        <slot></slot>
+      </div>
+      <!-- 右图标 -->
+      <div class="rightIcon" @click="chenk"></div>
+    </header>
+   
+  </div>
         <div>
             <img src="../../../assets/4.jpg" alt="" class="img">
         </div>
@@ -29,14 +42,40 @@
     </div>
 </template>
 <script>
-import xheader from "../../Xheader.vue"
+
 export default {
-    components: {
-        xheader
-    }
+ 
 }
 </script>
 <style scoped>
+header {
+  width: 10rem;
+  height: 1.333333rem;
+  line-height: 1.333333rem;
+  text-align: center;
+  color: white;
+  background-color: red;
+  /* 弹性盒布局 */
+  display: flex;
+}
+.leftIcon {
+  background: url(../../../assets/menu.png) no-repeat center;
+  background-size: 0.64rem;
+  flex: 1;
+}
+
+.title {
+  flex: 3;
+}
+
+.emptyIcon {
+  flex: 1;
+}
+.rightIcon {
+  background: url(../../../assets/my.png) no-repeat center;
+  background-size: 0.64rem;
+  flex: 1;
+}
 body{
     line-height: none;
 }

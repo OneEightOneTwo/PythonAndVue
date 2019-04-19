@@ -1,6 +1,18 @@
 <template>
   <div>
-    <xheader></xheader>
+   <div>
+    <header>
+      <!-- 左图标 -->
+      <div class="leftIcon"></div>
+
+      <!-- 标题 -->
+      <div class="title">
+        <slot></slot>
+      </div>
+      <!-- 右图标 -->
+      <div class="rightIcon"></div>
+    </header>
+  </div>
     <div class="body">
       <div class="ShowFoMe">
         <span>向我显示</span>
@@ -186,7 +198,7 @@
   </div>
 </template>
 <script>
-import xheader from "../Xheader.vue";
+
 
 export default {
   data() {
@@ -202,13 +214,40 @@ export default {
       this.$toast("当前值：" + nianling);
     }
   },
-  components: {
-    xheader
-  }
+ 
 };
 </script>
 
-<style>
+<style scoped>
+header {
+  width: 10rem;
+  height: 1.333333rem;
+  line-height: 1.333333rem;
+  text-align: center;
+  color: white;
+  background-color: red;
+  /* 弹性盒布局 */
+  display: flex;
+}
+.leftIcon {
+  background: url(../../assets/menu.png) no-repeat center;
+  background-size: 0.64rem;
+  flex: 1;
+}
+
+.title {
+  flex: 3;
+}
+
+.emptyIcon {
+  flex: 1;
+}
+.rightIcon {
+  background: url(../../assets/my.png) no-repeat center;
+  background-size: 0.64rem;
+  flex: 1;
+}
+
 html {
   background-color: #f4f6f0;
 }
