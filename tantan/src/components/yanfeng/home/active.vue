@@ -65,7 +65,7 @@ export default {
     baoguang
   },
   methods: {
-    chenck(){
+   chenck(){
       if (this.state.isactive == true) {
         this.state.isactive = false;
         this.state.isasid = true;

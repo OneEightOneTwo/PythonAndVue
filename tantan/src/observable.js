@@ -42,6 +42,44 @@ const state = Vue.observable({
     },
 
 
+         //active
+    isactive: false,
+   
+    activeleft: {
+        left: "0rem",
+        transition: "all 0.5s"
+    },
+    activerifht: {
+        left: "7rem",
+        transition: "all 0.5s"
+    },
+
+         //ident
+    isident: false,
+   
+    identleft: {
+        left: "0rem",
+        transition: "all 0.5s"
+    },
+    identrifht: {
+        left: "7rem",
+        transition: "all 0.5s"
+    },
+
+          //shezhi
+    isshezhi: false,
+   
+    shezhileft: {
+        left: "0rem",
+        transition: "all 0.5s"
+    },
+    shezhirifht: {
+        left: "7rem",
+        transition: "all 0.5s"
+    },
+
+
+
 })
 
 

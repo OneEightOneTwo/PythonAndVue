@@ -83,13 +83,12 @@ export default {
       if (this.state.isident == true) {
         this.state.isident = false;
         this.state.isasid = false;
-        // this.state.isActionsheet = true;
-        console.log('123')
+
       } else {
         this.state.isident = true;
         this.state.isasid = true;
-        // this.state.isActionsheet = true;
-        console.log('123')
+
+
         
       }
     }
