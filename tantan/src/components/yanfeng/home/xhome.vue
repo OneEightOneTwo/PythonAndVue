@@ -1,5 +1,5 @@
 <template>
-  <div :style="state.isActionsheet ? state.aright: state.bright">
+  <div class="xhome" :style="state.isActionsheet ? state.aright: state.bright">
     <header>
       <!-- 左图标 -->
       <div class="leftIcon" @click="leftcheck"></div>
@@ -17,7 +17,7 @@
   </div>
 </template>
 <script>
-import state from "../../observable.js";
+import state from "../../../observable.js";
 export default {
   computed: {
     state() {
@@ -29,29 +29,22 @@ export default {
       if (this.state.isActionsheet == true) {
         this.state.isActionsheet = false;
         this.state.isleft = false;
-        this.state.aright.marginLeft='0rem'
-        console.log(this.state.isleft)
-        console.log(this.state.isActionsheet)
+        this.state.aright.marginLeft = "0rem";
       } else {
         this.state.isActionsheet = true;
         this.state.isleft = true;
-        this.state.aright.marginLeft='-8.0rem'
-        console.log(this.state.isleft)
-        console.log(this.state.isActionsheet)
+        this.state.aright.marginLeft = "-8.0rem";
       }
     },
     leftcheck() {
       if (this.state.isActionsheet == true) {
-       
         this.state.isActionsheet = false;
-        // this.state.isleft = false;
-        this.state.aright.marginLeft='0rem'
-        console.log(this.state.aright.marginLeft)
+        this.state.isasid = false;
+        this.state.aright.marginLeft = "0rem";
       } else {
         this.state.isActionsheet = true;
-        // this.state.isleft = true;
-        this.state.aright.marginLeft='8.0rem'
-        console.log(this.state.aright.marginLeft)
+        this.state.isasid = true;
+        this.state.aright.marginLeft = "7.5rem";
       }
     }
   }
@@ -70,7 +63,7 @@ header {
   display: flex;
 }
 .leftIcon {
-  background: url(../../assets/menu.png) no-repeat center;
+  background: url(../../../assets/menu.png) no-repeat center;
   background-size: 0.64rem;
   flex: 1;
 }
@@ -83,8 +76,12 @@ header {
   flex: 1;
 }
 .rightIcon {
-  background: url(../../assets/my.png) no-repeat center;
+  background: url(../../../assets/my.png) no-repeat center;
   background-size: 0.64rem;
   flex: 1;
+}
+.xhome{
+  background: rgb(255, 255, 255);
+  height:15.146667rem
 }
 </style>

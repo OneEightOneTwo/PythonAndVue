@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div class="isident" :style="state.isident ? state.identrifht:state.identleft">
     <div>
-      <header>
+      <header>  
         <!-- 左图标 -->
-        <div class="leftIcon"></div>
+        <div class="leftIcon" @click="check"></div>
 
         <!-- 标题 -->
         <div class="title">
@@ -20,19 +20,19 @@
         <div class="ph">
           <dl>
             <dt>
-              <img src="../../assets/ident1.jpg">
+              <img src="../../../assets/ident1.jpg">
             </dt>
             <dd>认证标识</dd>
           </dl>
           <dl>
             <dt>
-              <img src="../../assets/ident2.jpg">
+              <img src="../../../assets/ident2.jpg">
             </dt>
             <dd>更多喜欢次数</dd>
           </dl>
           <dl>
             <dt>
-              <img src="../../assets/ident3.jpg">
+              <img src="../../../assets/ident3.jpg">
             </dt>
             <dd>优先推荐</dd>
           </dl>
@@ -47,19 +47,19 @@
         <div class="ph">
           <dl>
             <dt>
-              <img src="../../assets/ident4.jpg">
+              <img src="../../../assets/ident4.jpg">
             </dt>
             <dd>学生标识</dd>
           </dl>
           <dl>
             <dt>
-              <img src="../../assets/ident5.jpg">
+              <img src="../../../assets/ident5.jpg">
             </dt>
             <dd>筛选认证用户</dd>
           </dl>
           <dl>
             <dt>
-              <img src="../../assets/ident6.jpg">
+              <img src="../../../assets/ident6.jpg">
             </dt>
             <dd>满满信任感</dd>
           </dl>
@@ -71,13 +71,33 @@
   </div>
 </template>
 <script>
-// import "../../rem.js";
-export default {};
+import state from "../../../observable.js";
+export default {
+   computed: {
+    state() {
+      return state;
+    }
+  },
+  methods: {
+    check(){
+      if (this.state.isident == true) {
+        this.state.isident = false;
+        this.state.isasid = false;
+        // this.state.isActionsheet = true;
+        console.log('123')
+      } else {
+        this.state.isident = true;
+        this.state.isasid = true;
+        // this.state.isActionsheet = true;
+        console.log('123')
+        
+      }
+    }
+  }
+};
 </script>
 <style scoped>
-/* html{
-        font-size:27.78vw;
-    }*/
+
 header {
   width: 10rem;
   height: 1.333333rem;
@@ -89,7 +109,7 @@ header {
   display: flex;
 }
 .leftIcon {
-  background: url(../../assets/menu.png) no-repeat center;
+  background: url(../../../assets/menu.png) no-repeat center;
   background-size: 0.64rem;
   flex: 1;
 }
@@ -102,65 +122,69 @@ header {
   flex: 1;
 }
 .rightIcon {
-  background: url(../../assets/my.png) no-repeat center;
+  background: url(../../../assets/my.png) no-repeat center;
   background-size: 0.64rem;
   flex: 1;
 }
+.isident{
+  position: absolute;
+  height:100%;
+  overflow-x:hidden
+}
 .ident {
-  width: 100%;
-  height: 818px;
-  height: 273px;
-  padding: 20px 20px 0 20px;
-  border-radius: 20px;
+  width: 10rem;
+  height: 8.893333rem;
+  padding: .533333rem .533333rem 0 .533333rem;
+  border-radius: .533333rem;
 }
 .ident .t_photo {
   background: #ffffff;
 }
 .ident .t_photo h2 {
-  font-size: 18px;
+  font-size: .48rem;
   color: #2e2e2e;
-  margin-left: 103px;
+  margin-left: 2.746667rem;
 }
 .ident .t_photo p {
-  font-size: 12px;
+  font-size: .32rem;
   color: #9b9b9b;
-  margin-bottom: 17px;
-  margin-left: 52px;
+  margin-bottom: .453333rem;
+  margin-left: 1.386667rem;
 }
 .ident .t_photo .ph {
-  height: 144px;
-  width: 332px;
+  height: 3.84rem;
+  width: 8.853333rem;
   display: flex;
   justify-content: space-around;
 }
 .ident .t_photo .ph dt {
   display: inline-block;
-  width: 69px;
-  height: 69px;
-  margin-bottom: 9px;
+  width: 1.84rem;
+  height: 1.84rem;
+  
 }
 .ident .t_photo .ph dt img {
   width: 100%;
   height: 100%;
 }
 .ident .t_photo .ph dd {
-  font-size: 12px;
+  font-size: .32rem;
   color: #e3e3e3;
 }
 
 .ident .b_photo {
-  width: 332px;
-  height: 48px;
+  width: 8.853333rem;
+  height: 1.28rem;
   background: #f5f6f1;
   color: #c6504c;
-  font-size: 16px;
+  font-size:.426667rem;
   text-align: center;
-  line-height: 48px;
+  line-height: 1.28rem;
 }
 .footer {
   text-align: center;
   color: #a8a9a4;
-  font-size: 10px;
+  font-size: .266667rem;
 }
 </style>
 

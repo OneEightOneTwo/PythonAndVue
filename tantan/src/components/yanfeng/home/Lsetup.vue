@@ -1,4 +1,5 @@
 <template>
+
   <div id="box" :style="!state.isleft ? state.falseright :state.trueright">
     <div class="headers">
       <div class="heade">
@@ -33,8 +34,8 @@
 </template>
 
 <script>
-import pair from "../components/pair.vue";
-import chat from "../components/chat.vue";
+import pair from "../../lei/components/pair.vue";
+import chat from "../../lei/components/chat.vue";
 
 import state from "../../../observable.js";
 export default {
@@ -74,7 +75,7 @@ export default {
 
 #box {
   width: 8.266667rem;
-  height: 17.146667rem;
+  height:100%;
   background: #2e2721;
   position: absolute;
   top:0;

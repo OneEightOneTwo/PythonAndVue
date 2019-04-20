@@ -13,7 +13,7 @@
         </div>
         <div>
             <div class="tex">
-                <textarea cols="45" rows="6" placeholder="这一刻的想法...." style="border:none"></textarea>
+                <textarea  placeholder="这一刻的想法...." style="border:none"></textarea>
             </div>
             <div class="teximg">
                 <img src="../../../assets/wei1.png" alt="">
@@ -62,47 +62,53 @@ ul,li{
     list-style: none
 }
 .xheader{
-    height:60px;
-    line-height: 60px;
+    height:1.111111rem;
+    line-height: 1.111111rem;
     position: relative;
 }
 .xheader span:nth-child(1) img{
-    width:20px;
-    height:20px;
+    width:.481481rem;
+    height:.481481rem;
     position: absolute;
-    left:10px;
+    left:.388889rem;
     top:50%;
-    margin-top: -10px;
+    margin-top: -0.240741rem;
 }
 .xheader span:nth-child(2){
     position: absolute;
-    left:35px; 
+    left:1.12963rem; 
+    font-size: .416667rem
 }
 .xheader span:nth-child(3){
-    
+    font-size: .416667rem;
     position: absolute;
-    right:15px;
-    margin-top:10px;
+    right:.277778rem;
+    margin-top:.185185rem;
 }
-.tex{
-    margin-left: 15px;
+
+.tex textarea{
+    width:8.611111rem;
+    height: 3.222222rem;
+    margin-left: .657407rem;
+    font-size: .416667rem;
 }
 .teximg img{
-    width:90%;
-    height:60px;
-     margin-left: 15px;
+    width:8.675926rem;
+    height:1.75rem;
+     margin-left:.666667rem;
 }
 .hr{
-    width:90%;
-    border-top: 1px solid #d9d9d9;
-    margin-left: 15px;
+    width:8.333333rem;
+    border-top: .018519rem solid #d9d9d9;
+    margin-left: .972222rem;
     
 }
 .hr li{
-    height:50px;
-    line-height: 50px;
+    height:1.527778rem;
+    line-height: 1.527778rem;
     position: relative;
-    border-bottom: 1px solid #d9d9d9
+    border-bottom: .009259rem solid #d9d9d9;
+    font-size: .416667rem
 }
 /* .hr li span{
     display: inline-block;
@@ -112,24 +118,24 @@ ul,li{
     
 } */
 .hr li span:nth-child(1) img{
-    width:20px;
-    height:20px;
+    width:.592593rem;
+    height:.592593rem;
     position: absolute;
     top:50%;
-    margin-top: -10px;
+    margin-top: -0.296296rem;
 }
 .hr li span:nth-child(2) {
     
     position: absolute;
-    left:40px;
+    left:1.018519rem;
 }
 .hr li span:nth-child(3) img{
-    width:20px;
-    height:20px;
+    width:.388889rem;
+    height:.388889rem;
     position: absolute;
-    right:15px;
+    right:.435185rem;
     top:50%;
-    margin-top: -10px;
+    margin-top: -0.194444rem;
 }
 
 </style>

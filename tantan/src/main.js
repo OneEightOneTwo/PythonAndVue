@@ -6,6 +6,8 @@ import router from './router.js'
 // import swip from 'vue-swiper'
 import 'vue-swiper'
 import './rem.js'
+
+import store from './store.js'
 //引入element模块
 import 'weui'
 import ElementUI from 'element-ui';
@@ -20,7 +22,7 @@ new Vue({
     // 挂载路由实例
     router,
     // 配置状态管理
-    // store,
+    store,
     // 渲染App组件
 
     render: h => h(App),

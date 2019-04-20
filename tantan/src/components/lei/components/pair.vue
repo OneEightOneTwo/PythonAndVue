@@ -42,43 +42,45 @@
 export default {};
 </script>
 <style scoped>
+.new{
+  position: relative;
+}
 .news{
-    display: inline-block;
+    display:block;
     display: flex;
     width:100%;
-    height:50px;
-    position: relative;
-    top:55px;
+    height:1.333333rem;
+
 }
 .portrait {
-  width: 40px;
-  height: 40px;
+  width: 1.066667rem;
+  height: 1.066667rem;
   overflow: hidden;
-  border-radius: 20px;
+  border-radius:.533333rem;
   background: red;
   border: none;
   position: relative;
   left:20px;
 }
 .portrait img {
-  width: 40px;
-  height: 40px;
+  width: 1.066667rem;
+  height: 1.066667rem;
 
-  border-radius: 20px;
+  border-radius: .533333rem;
 }
 .port{
     position: relative;
-    left:30px;
+    left:.8rem;
 }
 .port h5{
 
     color:seashell;
     font-weight:normal;
-    font-size: 12px;
+    font-size: .32rem;
 }
 .port p{
     color:rgb(159, 184, 181);
-    font-size: 10px;
+    font-size: .266667rem;
 }
 </style>
 

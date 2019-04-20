@@ -1,23 +1,25 @@
 <template>
-  <div style="overflow:hidden;position:relative;height:568px">
-
-    <xhome ></xhome>
-    <lsetup ></lsetup>
-    <asid></asid>
+  <div class="boss">
+   <router-view></router-view>
+   <asid></asid>
+   <lsetup></lsetup>
   </div>
 </template>
 <script>
 // import lsetup from "../lei/page/Lsetup.vue";
 
-import xhome from "./xhome.vue";
-import asid from "./asid.vue";
-import lsetup from "../lei/page/Lsetup.vue";
+
+//引入左侧边栏模块
+import asid from './home/asid.vue'
+
+import lsetup from "./home/Lsetup.vue";
+
+
 export default {
    name: "app",
     components: {
-     lsetup,
-     xhome,
-     asid
+    asid,
+     lsetup
     },
   
   data() {
@@ -33,7 +35,12 @@ export default {
 };
 </script>
 <style scoped>
-
+.boss{
+  overflow:hidden;
+  position:relative;
+  height:17.7rem
+  
+}
 
 
 </style>

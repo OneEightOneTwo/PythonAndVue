@@ -1,18 +1,17 @@
 <template>
     <div>
-        <div :style="state.isActionsheet ? state.aright: state.bright">
+        <div>
     <header>
       <!-- 左图标 -->
-      <div class="leftIcon" ></div>
+      <div class="leftIcon"></div>
 
       <!-- 标题 -->
       <div class="title">
         <slot></slot>
       </div>
       <!-- 右图标 -->
-      <div class="rightIcon" @click="chenk"></div>
+      <div class="rightIcon"></div>
     </header>
-   
   </div>
         <div>
             <img src="../../../assets/4.jpg" alt="" class="img">
@@ -44,7 +43,9 @@
 <script>
 
 export default {
- 
+    components: {
+        
+    }
 }
 </script>
 <style scoped>

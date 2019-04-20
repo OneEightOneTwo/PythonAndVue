@@ -1,18 +1,18 @@
 <template>
-  <div>
-   <div>
-    <header>
-      <!-- 左图标 -->
-      <div class="leftIcon"></div>
+  <div class="shezhi">
+    <div>
+      <header>
+        <!-- 左图标 -->
+        <div class="leftIcon"></div>
 
-      <!-- 标题 -->
-      <div class="title">
-        <slot></slot>
-      </div>
-      <!-- 右图标 -->
-      <div class="rightIcon"></div>
-    </header>
-  </div>
+        <!-- 标题 -->
+        <div class="title">
+          <slot></slot>
+        </div>
+        <!-- 右图标 -->
+        <div class="rightIcon"></div>
+      </header>
+    </div>
     <div class="body">
       <div class="ShowFoMe">
         <span>向我显示</span>
@@ -37,11 +37,11 @@
               <b style="float:left">范围</b>
               <b style="float:right;margin-right:20px;">0 ~ 100km+</b>
             </div>
-            <van-slider class="fanwei_km" v-model="value" active-color="#f44">
+            <!-- <van-slider class="fanwei_km" v-model="value" active-color="#f44">
               <div slot="button" class="custom-button">
                 {{ value }}
               </div>
-            </van-slider>
+            </van-slider>-->
           </div>
         </div>
       </div>
@@ -50,17 +50,19 @@
         <div class="main">
           <div class="border_btm_line kuoda_ctn">
             <div class="kd_left">
-              <p><b style="font-size:14px;">自动扩大范围</b></p>
+              <p>
+                <b style="font-size:14px;">自动扩大范围</b>
+              </p>
               <p>如果用户较少,自动适量扩大范围</p>
             </div>
             <div class="kd_right">
-              <van-switch
+              <!-- <van-switch
                 class="zdkdfw"
                 v-model="checked"
                 size="24px"
                 active-color="#f44"
                 inactive-color="#58bc58"
-              />
+              />-->
             </div>
           </div>
         </div>
@@ -72,9 +74,7 @@
             <div class="sex_left">
               <b style="line-height:42px">显示性别</b>
             </div>
-            <div class="sex_zhong" style="line-height:42px;color: #969696;">
-              女生
-            </div>
+            <div class="sex_zhong" style="line-height:42px;color: #969696;">女生</div>
             <div class="sex_right"></div>
           </div>
         </div>
@@ -88,13 +88,13 @@
               <b style="float:right;margin-right:20px;">16&nbsp;-&nbsp;50</b>
             </div>
             <div class="age_range">
-              <van-slider
+              <!-- <van-slider
                 class="nianling"
                 v-model="nianling"
                 :min="16"
                 :max="50"
                 @change="onChange"
-              />
+              />-->
             </div>
           </div>
         </div>
@@ -104,14 +104,14 @@
         <div class="main" style="height:43px;">
           <div class="border_btm_line" style="height:42px;border:0">
             <b>优先推荐学生</b>
-            <div style="">
-              <van-switch
+            <div style>
+              <!-- <van-switch
                 class="stu_yx"
                 v-model="checked2"
                 size="24px"
                 active-color="#f44"
                 inactive-color="#58bc58"
-              />
+              />-->
             </div>
           </div>
         </div>
@@ -124,7 +124,7 @@
         <div class="setmain">
           <div class="set_m_left">
             <div>
-              <img src="../../assets/set1.png" />
+              <img src="../../assets/set1.png">
               <b>个人信息</b>
             </div>
             <p>编辑姓名等</p>
@@ -137,7 +137,7 @@
         <div class="setmain">
           <div class="set_m_left">
             <div>
-              <img src="../../assets/set2.png" />
+              <img src="../../assets/set2.png">
               <b>隐私和通知</b>
             </div>
             <p>联系人,我的相册,朋友圈和通知设置</p>
@@ -150,7 +150,7 @@
         <div class="setmain">
           <div class="set_m_left">
             <div>
-              <img src="../../assets/set3.png" />
+              <img src="../../assets/set3.png">
               <b>数据和缓存</b>
             </div>
             <p>数据和缓存设置</p>
@@ -163,7 +163,7 @@
         <div class="setmain" style="border:0">
           <div class="set_m_left">
             <div>
-              <img src="../../assets/set4.png" />
+              <img src="../../assets/set4.png">
               <b>账号与安全</b>
             </div>
             <p>修改手机号和密码</p>
@@ -179,7 +179,7 @@
         <div class="setmain" style="border:0">
           <div class="set_m_left">
             <div>
-              <img src="../../assets/set5.png" />
+              <img src="../../assets/set5.png">
               <b>帮助与反馈</b>
             </div>
             <p>感谢您提出对探探的宝贵意见</p>
@@ -198,8 +198,6 @@
   </div>
 </template>
 <script>
-
-
 export default {
   data() {
     return {
@@ -213,12 +211,15 @@ export default {
     onChange(nianling) {
       this.$toast("当前值：" + nianling);
     }
-  },
- 
+  }
 };
 </script>
 
 <style scoped>
+.shezhi{
+  height:100%;
+  overflow-x:hidden
+}
 header {
   width: 10rem;
   height: 1.333333rem;
@@ -438,9 +439,6 @@ html {
 .nianling {
   margin: 10px 0 0 10px;
   width: 90%;
-}
-.nianling .van-slider__bar {
-  background: rgb(255, 68, 68);
 }
 </style>
 
