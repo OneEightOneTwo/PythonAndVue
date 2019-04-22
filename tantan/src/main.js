@@ -6,13 +6,15 @@ import router from './router.js'
 // import swip from 'vue-swiper'
 import 'vue-swiper'
 import './rem.js'
-
+import "jquery";
 import store from './store.js'
 //引入element模块
 import 'weui'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+import stack from './components/yanfeng/home/xhome.vue'
 
+Vue.use(stack);
 Vue.use(ElementUI);
 
 Vue.config.productionTip = false
