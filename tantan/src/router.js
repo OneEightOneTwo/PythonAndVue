@@ -25,16 +25,19 @@ import industry from './components/lei/page/industry.vue'
 // 定义路由
 
 const routes = [{ path: '/', redirect: '/home/xhome' },
+{ path: '/personaldata', component: personaldata, name: 'personaldata', },
 { path: '/edit', component: edit, name: 'edit' },
 { path: '/industry', component: industry, name: 'industry', },
 {
-    path: '/home', component: home, name: 'home',
+    path: '/home',
+    component: home,
+    name: 'home',
     children: [
         { path: 'xhome', component: xhome, name: 'xhome' },
         { path: 'wei', component: wei, name: 'wei' },
         { path: 'active', component: active, name: 'active' },
         { path: 'ident', component: ident, name: 'ident' },
-        { path: 'personaldata', component: personaldata, name: 'personaldata', },
+        // { path: 'personaldata', component: personaldata, name: 'personaldata', },
         { path: 'shezhi', component: shezhi, name: 'shezhi' },
         { path: 'wei', component: wei, name: 'wei' },
         { path: 'lmain', component: lmain, name: 'lmain' },

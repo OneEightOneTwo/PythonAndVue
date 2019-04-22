@@ -10,7 +10,7 @@
           激活特权
         </div>
         <!-- 右图标 -->
-        <div class="rightIcon"></div>
+        <div class="rightIcon" @click="showTanchuang"></div>
       </header>
     </div>
     <div class="banner">
@@ -30,11 +30,13 @@
         <baoguang v-show="active==2"></baoguang>
         </div>
         <div class="getMember" style="background:#ea6151;color:#fff1ee;">认证成功</div>
+<actionsheet></actionsheet>
         </div>
+
 </template>
 <script>
 import state from "../../../observable.js";
-
+import actionsheet from './tanchuang.vue'
 import vip from './active/vip.vue'
 import like from './active/like.vue'
 import baoguang from './active/baoguang.vue'
@@ -62,7 +64,8 @@ export default {
    components: {
     vip,
     like,
-    baoguang
+    baoguang,
+    actionsheet
   },
   methods: {
    chenck(){
@@ -80,6 +83,14 @@ export default {
      change(idx) {
       this.active = idx;
     },
+    showDialog() {
+      // 触发action的setIsShowDialog
+      this.$store.dispatch("setIsShowDialog", true);
+    },
+    showTanchuang() {
+      // 触发action的setIsShowDialog
+      this.$store.dispatch("setIsTanchuang", true);
+    }
   }
 };
 </script>
