@@ -3,14 +3,14 @@
         <div>
     <header>
       <!-- 左图标 -->
-      <div class="leftIcon"></div>
+      <div class="leftIcon" @click="cancell">取消</div>
 
       <!-- 标题 -->
       <div class="title">
         <slot></slot>
       </div>
       <!-- 右图标 -->
-      <div class="rightIcon"></div>
+      <div class="rightIcon" @click="editContent">编辑</div>
     </header>
   </div>
         <div>
@@ -41,12 +41,17 @@
     </div>
 </template>
 <script>
-
 export default {
-    components: {
-        
+  components: {},
+  methods: {
+    cancell() {
+      this.$router.push({ path: "/" });
+    },
+    editContent(){
+        this.$router.push({path:"edit"})
     }
-}
+  }
+};
 </script>
 <style scoped>
 header {
@@ -60,7 +65,7 @@ header {
   display: flex;
 }
 .leftIcon {
-  background: url(../../../assets/menu.png) no-repeat center;
+  /* background: url(../../../assets/menu.png) no-repeat center; */
   background-size: 0.64rem;
   flex: 1;
 }
@@ -73,112 +78,103 @@ header {
   flex: 1;
 }
 .rightIcon {
-  background: url(../../../assets/my.png) no-repeat center;
+  /* background: url(../../../assets/my.png) no-repeat center; */
   background-size: 0.64rem;
   flex: 1;
 }
-body{
-    line-height: none;
+body {
+  line-height: none;
 }
-ul,li{
-    list-style: none;
+ul,
+li {
+  list-style: none;
 }
-.img{
-    width:100%;
-    height:300px;
+.img {
+  width: 100%;
+  height: 300px;
 }
-.names{
-    position: relative;
-    height: 77px;
-   
-    
+.names {
+  position: relative;
+  height: 77px;
 }
-.names .aul{
-    position: absolute;
-    left:10px;
-    
-    
+.names .aul {
+  position: absolute;
+  left: 10px;
 }
-.names .aul .aul_li{
-    height: 25px;
-    position: relative;
+.names .aul .aul_li {
+  height: 25px;
+  position: relative;
 }
 .names .aul .aul_li span:nth-child(1) {
-    display: inline-block;
-    font-size: 12px;
-    border-radius: 5px;
-    background: #eccbf2;
-    color:seashell;
-    width:42px;
-    height:22px;
-     text-align: center;
-    line-height: 22px;
-    position: absolute;
+  display: inline-block;
+  font-size: 12px;
+  border-radius: 5px;
+  background: #eccbf2;
+  color: seashell;
+  width: 42px;
+  height: 22px;
+  text-align: center;
+  line-height: 22px;
+  position: absolute;
 }
 .names .aul .aul_li span:nth-child(2) {
-    display: inline-block;
-    font-size: 12px;
-    border-radius: 5px;
-    background: #4a9d7b;
-    color:seashell;
-    width:42px;
-    height:22px;
-    text-align: center;
-    line-height: 22px;
-    position: absolute;
-    left:50px;
-    
-    
+  display: inline-block;
+  font-size: 12px;
+  border-radius: 5px;
+  background: #4a9d7b;
+  color: seashell;
+  width: 42px;
+  height: 22px;
+  text-align: center;
+  line-height: 22px;
+  position: absolute;
+  left: 50px;
 }
 .names .aul li:nth-child(3) {
-    font-size: 12px;
-    color:#a6a6a6
+  font-size: 12px;
+  color: #a6a6a6;
 }
-.renzheng{
-    font-size: 12px;
-    width:100%;
-    height:42px;
-    background: #74c4f7;
-    color:seashell;
-    line-height: 42px;
-    position: relative;
+.renzheng {
+  font-size: 12px;
+  width: 100%;
+  height: 42px;
+  background: #74c4f7;
+  color: seashell;
+  line-height: 42px;
+  position: relative;
 }
-.renzheng span:nth-child(1) img{
-    width:20px;
-    height:20px;
-    position: absolute;
-    top:12px;
-    left:12px;
+.renzheng span:nth-child(1) img {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 12px;
+  left: 12px;
 }
-.renzheng span:nth-child(2){
-   
-    position: absolute;
+.renzheng span:nth-child(2) {
+  position: absolute;
 
-    left:37px;
+  left: 37px;
 }
-.renzheng span:nth-child(3) img{
-    width:20px;
-    height:20px;
-     position: absolute;
-    top:12px;
-    right:10px ;
+.renzheng span:nth-child(3) img {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 12px;
+  right: 10px;
 }
-.xinx{
-    color: #9b9b9b;
-    font-size: 14px;
-
-
+.xinx {
+  color: #9b9b9b;
+  font-size: 14px;
 }
-.xinx p{
-    height:40px;
-    line-height: 40px;
-    padding-left: 10px; 
-
+.xinx p {
+  height: 40px;
+  line-height: 40px;
+  padding-left: 10px;
 }
-.xinx p:nth-child(1){
-    background: #f6f5f1
+.xinx p:nth-child(1) {
+  background: #f6f5f1;
 }
-.xinx p:nth-child(2) span:nth-child(2){
-     padding-left: 35px; 
+.xinx p:nth-child(2) span:nth-child(2) {
+  padding-left: 35px;
 }
 </style>

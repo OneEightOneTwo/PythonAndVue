@@ -6,7 +6,7 @@
         <span>
           <img src="../../../assets/left.png" alt>
         </span>
-        <span>编辑个人资料</span>
+        <span @click="toEdit">编辑个人资料</span>
       </div>
       <div class="title">行业</div>
       <div class="rightIcon"></div>
@@ -63,6 +63,11 @@ export default {
     //         ]
     //     }
     // }
+    methods:{
+      toEdit(){
+        this.$router.push({name:"edit"})
+      }
+    }
 };
 </script>
 <style scoped>

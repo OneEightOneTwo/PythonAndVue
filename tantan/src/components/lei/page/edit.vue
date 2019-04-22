@@ -1,9 +1,9 @@
 <template>
   <div>
     <div class="header">
-      <div class="leftIcon">取消</div>
+      <div class="leftIcon" @click="cancell">取消</div>
       <div class="title">编辑个人资料</div>
-      <div class="rightIcon">保存</div>
+      <div class="rightIcon" @click="cancell">保存</div>
     </div>
     <div class="ui-feeds">
       <ul class="ul1" style="font-size:0">
@@ -49,7 +49,7 @@
         </div>
         <div class="may_main">
           <ul>
-            <li class="column" v-for="(data,idx) in datas" :key="idx">
+            <li @click="toAdd" class="column" v-for="(data,idx) in datas" :key="idx">
               <span class="column_title">{{data.title}}</span>
               <span class="column_main">{{data.main}}</span>
               <span class="column_img">
@@ -83,7 +83,7 @@
         </div>
         <div class="may_main_two">
           <ul>
-            <li class="column_two" v-for="(nwes,idx) in nwes" :key="idx">
+            <li @click="toAdd" class="column_two" v-for="(nwes,idx) in nwes" :key="idx">
               <span class="column_title_two">
                 <img :src="nwes.titleimg" alt>
               </span>
@@ -188,6 +188,14 @@ export default {
         }
       ]
     };
+  },
+  methods:{
+    cancell(){
+      this.$router.push({name:"personaldata"})
+    },
+    toAdd(){
+      this.$router.push({name:"industry"});
+    }
   }
 };
 </script>
