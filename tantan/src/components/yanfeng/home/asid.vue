@@ -2,14 +2,14 @@
   <div id="side" :style="state.isasid ? state.asidrifht: state.asidleft">
     <dl>
       <dt>
-        <img class="im1" src="../../../assets/yu1.jpg" alt>
+        <img  @click="checkEdit" class="im1" src="../../../assets/yu1.jpg" alt>
         <span>
           <img src="../../../assets/tou_v.jpg">
         </span>
       </dt>
       <dd>
         <h2>Hello，我是黄景瑜</h2>
-        <p>
+        <p @click="checkEdit">
           <span>点击查看</span>/
           <span>编辑</span>
         </p>
@@ -84,7 +84,7 @@ export default {
     
         this.$router.push({ path  });
      
-      this.$router.push({ name });
+      // this.$router.push({ name });
       this.state.aright.marginLeft = "0rem";
       this.state.isasid = false;
       this.state.isActionsheet = false;
@@ -92,7 +92,9 @@ export default {
       this.state.isident = false;
       
     },
-   
+   checkEdit(){
+     this.$router.push({ name: "personaldata" })
+   }
   }
 };
 </script>
