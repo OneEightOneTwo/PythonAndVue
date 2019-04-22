@@ -1,16 +1,16 @@
 <template>
   <div class="isident" :style="state.isident ? state.identrifht:state.identleft">
     <div>
-      <header>  
+      <header>
         <!-- 左图标 -->
         <div class="leftIcon" @click="check"></div>
 
         <!-- 标题 -->
         <div class="title">
-          <slot></slot>
+          认证中心
         </div>
         <!-- 右图标 -->
-        <div class="rightIcon"></div>
+        <div class="rightIcon" @click="chenkge"></div>
       </header>
     </div>
     <div class="ident">
@@ -86,17 +86,27 @@ export default {
 
       } else {
         this.state.isident = true;
-        this.state.isasid = true;
-
-
-        
+        this.state.isasid = true;   
       }
-    }
+     
+   
+    },
+      chenkge() {
+      if (this.state.isident == true) {
+        
+        this.state.isident = false;
+        this.state.isleft = false;
+        this.state.identrifht.left = "7.5rem";
+      } else {
+        this.state.isleft = true;
+        this.state.isident = true; 
+        this.state.identrifht.left = "-8.2rem";
+      }
   }
-};
+}
+}
 </script>
 <style scoped>
-
 header {
   width: 10rem;
   height: 1.333333rem;
@@ -125,29 +135,29 @@ header {
   background-size: 0.64rem;
   flex: 1;
 }
-.isident{
+.isident {
   position: absolute;
-  height:100%;
-  overflow-x:hidden
+  height: 100%;
+  overflow-x: hidden;
 }
 .ident {
   width: 10rem;
   height: 8.893333rem;
-  padding: .533333rem .533333rem 0 .533333rem;
-  border-radius: .533333rem;
+  padding: 0.533333rem 0.533333rem 0 0.533333rem;
+  border-radius: 0.533333rem;
 }
 .ident .t_photo {
   background: #ffffff;
 }
 .ident .t_photo h2 {
-  font-size: .48rem;
+  font-size: 0.48rem;
   color: #2e2e2e;
   margin-left: 2.746667rem;
 }
 .ident .t_photo p {
-  font-size: .32rem;
+  font-size: 0.32rem;
   color: #9b9b9b;
-  margin-bottom: .453333rem;
+  margin-bottom: 0.453333rem;
   margin-left: 1.386667rem;
 }
 .ident .t_photo .ph {
@@ -160,14 +170,13 @@ header {
   display: inline-block;
   width: 1.84rem;
   height: 1.84rem;
-  
 }
 .ident .t_photo .ph dt img {
   width: 100%;
   height: 100%;
 }
 .ident .t_photo .ph dd {
-  font-size: .32rem;
+  font-size: 0.32rem;
   color: #e3e3e3;
 }
 
@@ -176,14 +185,14 @@ header {
   height: 1.28rem;
   background: #f5f6f1;
   color: #c6504c;
-  font-size:.426667rem;
+  font-size: 0.426667rem;
   text-align: center;
   line-height: 1.28rem;
 }
 .footer {
   text-align: center;
   color: #a8a9a4;
-  font-size: .266667rem;
+  font-size: 0.266667rem;
 }
 </style>
 

@@ -7,7 +7,7 @@
 
         <!-- 标题 -->
         <div class="title">
-          <slot></slot>
+          激活特权
         </div>
         <!-- 右图标 -->
         <div class="rightIcon"></div>

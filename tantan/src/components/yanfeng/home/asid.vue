@@ -79,18 +79,15 @@ export default {
   methods: {
     toTantan(topic) {
       this.topic = topic;
-      let path = this.topics[topic].path;
-      
-    
-        this.$router.push({ path  });
-     
-      this.$router.push({ name });
-      this.state.aright.marginLeft = "0rem";
+      let path = this.topics[topic].path; 
+      this.$router.push({ path  });
+      this.state.xhomeleft.marginLeft = "0rem";
       this.state.isasid = false;
       this.state.isActionsheet = false;
       this.state.isactive = true;
       this.state.isident = false;
-      
+      this.state.isshezhi = false
+      this.state.islmain = false
     },
    
   }

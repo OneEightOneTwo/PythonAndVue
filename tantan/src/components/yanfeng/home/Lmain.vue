@@ -1,13 +1,13 @@
 <template>
-  <div>
+  <div class="lmain" :style="state.islmain ? state.lmainrifht:state.lmainleft">
    <div>
     <header>
       <!-- 左图标 -->
-      <div class="leftIcon"></div>
+      <div class="leftIcon" @click="checkleft"></div>
 
       <!-- 标题 -->
       <div class="title">
-        <slot></slot>
+        新手引导
       </div>
       <!-- 右图标 -->
       <div class="rightIcon"></div>
@@ -51,7 +51,26 @@
   </div>
 </template>
 <script>
+import state from "../../../observable.js";
 export default {
+  methods: {
+    checkleft() {
+      if (this.state.islmain == true) {
+        this.state.islmain = false;
+        this.state.isasid = false;
+        this.state.asidleft.transition = "all 0.6s";
+      } else {
+        this.state.islmain = true;
+        this.state.isasid = true;
+        this.state.asidleft.transition = "all 0.5s";
+      }
+    }
+  },
+  computed:{
+      state(){
+          return state;
+      }
+  },
  
 };
 </script>
@@ -65,6 +84,11 @@ header {
   background-color: red;
   /* 弹性盒布局 */
   display: flex;
+}
+.lmain{
+   position: absolute;
+  height:100%;
+  overflow-x: hidden;
 }
 .leftIcon {
   background: url(../../../assets/menu.png) no-repeat center;

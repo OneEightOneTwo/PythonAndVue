@@ -19,11 +19,11 @@ const state = Vue.observable({
    //控制xhome页
     isActionsheet: false,
     //控制主页往左移动
-    aright: {
+    xhomeleft: {
         marginLeft: "-8rem",
         transition: "all 0.5s"
     },
-    bright: {
+    xhomeright: {
         marginLeft: "0rem",
         transition: "all 0.5s"
     },
@@ -74,7 +74,30 @@ const state = Vue.observable({
         transition: "all 0.5s"
     },
     shezhirifht: {
-        left: "7rem",
+        left: "7.5rem",
+        transition: "all 0.5s"
+    },
+           //wei
+    iswei: false,
+   
+    weileft: {
+        left: "0rem",
+        transition: "all 0.5s"
+    },
+    weirifht: {
+        left: "7.5rem",
+        transition: "all 0.5s"
+    },
+
+    //Lmain
+        islmain: false,
+   
+    lmainleft: {
+        left: "0rem",
+        transition: "all 0.5s"
+    },
+    lmainrifht: {
+        left: "7.5rem",
         transition: "all 0.5s"
     },
 

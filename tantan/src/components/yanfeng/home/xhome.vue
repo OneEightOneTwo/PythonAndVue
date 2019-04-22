@@ -1,12 +1,12 @@
 <template>
-  <div class="xhome" :style="state.isActionsheet ? state.aright: state.bright">
+  <div class="xhome" :style="state.isActionsheet ? state.xhomeleft: state.xhomeright">
     <header>
       <!-- 左图标 -->
       <div class="leftIcon" @click="leftcheck"></div>
 
       <!-- 标题 -->
       <div class="title">
-        <slot></slot>
+        探探
       </div>
       <!-- 右图标 -->
       <div class="rightIcon" @click="chenk"></div>
@@ -29,22 +29,22 @@ export default {
       if (this.state.isActionsheet == true) {
         this.state.isActionsheet = false;
         this.state.isleft = false;
-        this.state.aright.marginLeft = "0rem";
+        this.state.xhomeleft.marginLeft = "0rem";
       } else {
         this.state.isActionsheet = true;
         this.state.isleft = true;
-        this.state.aright.marginLeft = "-8.0rem";
+        this.state.xhomeleft.marginLeft = "-8.0rem";
       }
     },
     leftcheck() {
       if (this.state.isActionsheet == true) {
         this.state.isActionsheet = false;
         this.state.isasid = false;
-        this.state.aright.marginLeft = "0rem";
+        this.state.xhomeleft.marginLeft = "0rem";
       } else {
         this.state.isActionsheet = true;
         this.state.isasid = true;
-        this.state.aright.marginLeft = "7.5rem";
+        this.state.xhomeleft.marginLeft = "7.5rem";
       }
     }
   }

@@ -26,7 +26,7 @@
       </ul>
       <div class="content">
          <pair v-show="active==0"></pair>
-      <chat v-show="active==1"></chat>     
+         <chat v-show="active==1"></chat>     
       </div>
       
     </div>
@@ -34,8 +34,8 @@
 </template>
 
 <script>
-import pair from "../../lei/components/pair.vue";
-import chat from "../../lei/components/chat.vue";
+import pair from "../components/pair.vue";
+import chat from "../components/chat.vue";
 
 import state from "../../../observable.js";
 export default {

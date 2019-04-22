@@ -1,16 +1,16 @@
 <template>
-  <div class="shezhi">
+  <div class="shezhi" :style="state.isshezhi ? state.shezhirifht:state.shezhileft">
     <div>
       <header>
         <!-- 左图标 -->
-        <div class="leftIcon"></div>
+        <div class="leftIcon" @click="chenkleft"></div>
 
         <!-- 标题 -->
         <div class="title">
           <slot></slot>
         </div>
         <!-- 右图标 -->
-        <div class="rightIcon"></div>
+        <div class="rightIcon" @click="chenkright"></div>
       </header>
     </div>
     <div class="body">
@@ -198,6 +198,7 @@
   </div>
 </template>
 <script>
+import state from "../../observable.js";
 export default {
   data() {
     return {
@@ -210,15 +211,49 @@ export default {
   methods: {
     onChange(nianling) {
       this.$toast("当前值：" + nianling);
+    },
+    chenkleft() {
+      if (this.state.isshezhi == true) {
+       
+        this.state.isshezhi = false;
+        this.state.isasid = false;
+         
+      } else {
+        this.state.isshezhi = true;
+        this.state.isasid = true;
+       
+        
+       
+      }
+    },
+    chenkright() {
+      if (this.state.isshezhi == true) {
+       
+        this.state.isshezhi = false;
+        this.state.isleft = false;
+         this.state.shezhirifht.left = "7.5rem";
+      } else {
+        this.state.isshezhi = true;
+        this.state.isleft = true;
+       this.state.shezhirifht.left = "-8.2rem";
+        
+       
+      }
+    }
+  },
+  computed: {
+    state() {
+      return state;
     }
   }
 };
 </script>
 
 <style scoped>
-.shezhi{
-  height:100%;
-  overflow-x:hidden
+.shezhi {
+  position: absolute;
+  height: 100%;
+  overflow-x: hidden;
 }
 header {
   width: 10rem;
